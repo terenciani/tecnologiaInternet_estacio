@@ -1,6 +1,9 @@
 <!--
-	Um comentário em HTML sempre estará entre os símbolos da linha 1 e linha 3.
+	Um comentário em HTML sempre estará entre os símbolos da linha 1 e linha 4.
 	Todo o conteúdo escrito entre esses símbolos não será renderizado para o usuário.
+
+
+	O atributo lang="pt-br" serve para a semântica do site, utilizado principalmente para indexação
 -->
 
 <html lang="pt-br">
@@ -9,8 +12,19 @@
 		Os Metadados são um conjunto de informações a respeito da página e do conteúdo nela publicado. Essas informações são usadas pelos navegadores, sendo invisíveis para os usuários. Todos os Metadados ficam contidos na tag <head>
 	-->
 	<head>
+		<!--
+			a tag meta são as metainformações do meu site, 
+			neste caso estou configurando a acentução já que o HTML, por padrão, não renderiza acentuação e caracteres especiais.		
+		-->
 		<meta charset="UTF-8"/>
+		<!--
+			a tag title é o titulo da minha página, ou seja, será renderizado na aba do navegador
+		-->
+
 		<title>Saiba tudo sobre o Google Glass</title>
+		<!--
+			a tag style é onde o estilo da minha página é colocado
+		
 		<style>
 			@font-face{
 				font-family: 'FonteLogo';
@@ -23,6 +37,7 @@
 			}
 			
 		</style>
+		-->
 	</head>
 	
 	<!--
@@ -34,9 +49,10 @@
 				 O <hgroup> tem como função agrupar dois ou mais elementos h1 até h6 organizando-os em uma hierarquia de títulos e subtítulos.
 			-->
 			<hgroup>
-				<h1>Google Glass</h1>
-				<h2>A revolução do Google está chegando</h2>
+				<h1 id="google-glass">Google Glass</h1>
+				<h2>A revolução    &nbsp      do Google está chegando</h2>
 			</hgroup>
+
 
 			<!--
 				O Elementos HTML <img> representa a inseração de imagem no documento, sedo implementado também pelo HTML5 para uma melhor experiência com o elemento <figure> e <figcaption>.
@@ -46,7 +62,7 @@
 				O atributo alt é usado para fornecer uma descrição textual alternativa da imagem caso por alguma razão a imagem não seja renderizada para o usuário. Isto é particularmente importante para usuários com restrições visuais ou quando a imagem é carregada muito lentamente. Em conseqüência, sempre use o atributo alt:
 
 			-->
-			<img src="_imagens/glass-oculos-preto-peq.png">
+			<img src="_imagens/glass-oculos-preto-peq.png" />
 
 			<!--
 				O elemento <ul> define uma lista não ordenada. Os itens de uma lista são representadaos pelo elemento <li>. Para representar uma lista ORDENADA substituimos a tag <ul> por <ol>.
@@ -90,7 +106,7 @@
 			Para mais caracteres especiais acesse: http://erikasarti.net/html/acentuacao-caracteres-especiais/
 		--> 
 		<h1>Símbolos especiais</h1>
-		&amp; - E comercial
+		&amp; - E comercial &#36;
 
 
 		<h1>O que é</h1>
@@ -110,6 +126,23 @@
 
 		<h1>Especificações Técnicas</h1>
 
+		<!--
+			As tabelas são inseridas em HTML por meio da tag <table>
+			cada linha de uma tabela são chamadas de "table row" = <tr>
+			cada célula de uma tabela são chamadas de "table data" = <td>
+
+			Quando queremos que uma célula ocupe mais de uma linha devemos passar um atributo para a célula utilizando a "espanção em linha" = rowspan. Nesse casso devemos passar a quantidade de linhas, por exemplo: 
+
+				<td rowspan="2">Camera</td>
+				<td>5MP para fotos </td>
+				<td>720p para vídeos</td>
+				
+			Da mesma forma, quando queremos que uma célula ocupe mais de uma coluna devemos passar um atributo para a célula utilizando a "espanção em coluna" = colspan. Nesse casso devemos passar a quantidade de colunas, por exemplo:
+
+				<td colspan="2">Camera</td>
+				<td>5MP para fotos </td>
+				<td>720p para vídeos</td>
+		-->
 		<table id="tabela">
     		<caption>Tabela Técnica do Google Glass Mar/2013</caption>
 			<tr>
