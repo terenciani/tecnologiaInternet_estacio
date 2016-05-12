@@ -24,162 +24,217 @@
 		<title>Saiba tudo sobre o Google Glass</title>
 		<!--
 			a tag style é onde o estilo da minha página é colocado
-		
+			a tag link faz um link com um arquivo de estilo localizado dentro da pasta _css
+			usar um arquivo externo para colocar o css é uma boa prática de programação.
+		-->	
+		<link rel="stylesheet" href="_css/estilo.css" />
 		<style>
+			
+
 			@font-face{
 				font-family: 'FonteLogo';
 				src: url("_fonts/bubblegum-sans-regular.otf");
 			}
 			
-			h1, a{
-				background-color: #DDDDDD;
+			h1{	
 				font-family: 'FonteLogo', sans-serif;
 			}
+
+			div#conteudo{
+				width: 900px;
+				background-color: #ffffff;
+				margin: -20px auto 0px auto;
+				padding: 10px;
+				/*deslocamento lateral, deslocamento vertical, espalhamento da sombra e a cor*/
+				box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+
+			}
+
+
+			/*Formatacao do menu*/
+			nav#menu{
+				display: block;
+			}
+			nav#menu ul{
+				list-style: none;
+				text-transform: uppercase;
+				position: absolute;
+				top: -20px;
+				left: 740px;
+			}
+			nav#menu li{
+				display: inline-block;
+				background-color: #dddddd;
+				padding: 10px;
+				margin: 2px;
+				transition: background-color 2s;
+			}
+			nav#menu h1{
+				display: none;
+			}
+			nav#menu li:hover{
+				background-color: #606060;
+			}
+			nav#menu li:active{
+				background-color: #606060;
+			}
+			nav#menu a{
+				color: black;
+				text-decoration: none;
+			}
+			nav#menu a:hover{
+				color: white;
+				text-decoration: underline;
+			}
+			
 			
 		</style>
-		-->
 	</head>
 	
 	<!--
 		O body é o elemento no nosso documento responsável por indentificar o conteúdo do site. Diferente do head, o que está dentro do <body> é o que fica/ou ficará disponível para visualização do visitante.
 	-->
 	<body>
-		<header id="cabecalho">
-			<!--
-				 O <hgroup> tem como função agrupar dois ou mais elementos h1 até h6 organizando-os em uma hierarquia de títulos e subtítulos.
-			-->
+		<div id="conteudo">
+			<header id="cabecalho">
+				<!--
+					 O <hgroup> tem como função agrupar dois ou mais elementos h1 até h6 organizando-os em uma hierarquia de títulos e subtítulos.
+				-->
+				<hgroup>
+					<h1 id="google-glass">Google Glass</h1>
+					<h2>A revolução    &nbsp      do Google está chegando</h2>
+				</hgroup>
+
+
+				<!--
+					O Elementos HTML <img> representa a inseração de imagem no documento, sedo implementado também pelo HTML5 para uma melhor experiência com o elemento <figure> e <figcaption>.
+
+					O atributo src, que diz ao navegador onde a imagem está localizada.
+
+					O atributo alt é usado para fornecer uma descrição textual alternativa da imagem caso por alguma razão a imagem não seja renderizada para o usuário. Isto é particularmente importante para usuários com restrições visuais ou quando a imagem é carregada muito lentamente. Em conseqüência, sempre use o atributo alt:
+
+				-->
+				<img src="_imagens/glass-oculos-preto-peq.png" />
+
+				<!--
+					O elemento <ul> define uma lista não ordenada. Os itens de uma lista são representadaos pelo elemento <li>. Para representar uma lista ORDENADA substituimos a tag <ul> por <ol>.
+
+				-->
+				<nav id="menu">
+					<h1>Menu Principal </h1>
+					<ul id="menu-principal">
+						<li>
+							<!--
+								O elemento <a> cria um link com uma página. O atributo href faz referência à pagina destino ao clicar na opção. Neste caso estamos criando um link para uma página que nós estamos construindo, mas poderia ser uma página já existente, por exempo:
+							
+								<a href="http://www.estacio.br">Estácio</a>
+							-->
+
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="specs.html">Especificações</a>
+						</li>
+						<li>
+							<a href="fotos.html">Fotos</a>
+						</li>
+						<li>
+							<a href="multimidia.html">Multimídia</a>
+						</li>
+						<li>
+							<a href="fale-conosco.html">Fale Conosco</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
 			<hgroup>
-				<h1 id="google-glass">Google Glass</h1>
-				<h2>A revolução    &nbsp      do Google está chegando</h2>
+				<h2>Tecnologia > Inovações</h2>
+				<h1>Saiba tudo sobre o Google Glass </h1>
+				<h3>por Marcelo F. Terenciani </h3>
+				<h4>Atualizado em 07/Abril/2016 </h4>
 			</hgroup>
 
+			<!--
+				No HTML não é possível representar alguns caracteres especiais automaticamente. Para isto é necessário utilizar uma codificação especial para inseri-los, como no exemplo abaixo.
+				Para mais caracteres especiais acesse: http://erikasarti.net/html/acentuacao-caracteres-especiais/
+			--> 
+			<h1>Símbolos especiais</h1>
+			&amp; - E comercial &#36;
+
+
+			<h1>O que é</h1>
 
 			<!--
-				O Elementos HTML <img> representa a inseração de imagem no documento, sedo implementado também pelo HTML5 para uma melhor experiência com o elemento <figure> e <figcaption>.
-
-				O atributo src, que diz ao navegador onde a imagem está localizada.
-
-				O atributo alt é usado para fornecer uma descrição textual alternativa da imagem caso por alguma razão a imagem não seja renderizada para o usuário. Isto é particularmente importante para usuários com restrições visuais ou quando a imagem é carregada muito lentamente. Em conseqüência, sempre use o atributo alt:
-
+				A tag p identifica os meus paragrafos
+				a tap br indentica uma quebra de linha
+				a tag pre aceita a configuração de quebras e espaços
 			-->
-			<img src="_imagens/glass-oculos-preto-peq.png" />
+
+			<p>O Google &nbsp &nbsp &nbsp &nbsp Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada.Também chamado de Project Glass, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmete gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+
+			<img src="_imagens/glass-quadro-homem-mulher.jpg">
+
+			<h1>Data de lançamento</h1>
+			<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014. </p>
+
+			<h1>Especificações Técnicas</h1>
 
 			<!--
-				O elemento <ul> define uma lista não ordenada. Os itens de uma lista são representadaos pelo elemento <li>. Para representar uma lista ORDENADA substituimos a tag <ul> por <ol>.
-			-->
+				As tabelas são inseridas em HTML por meio da tag <table>
+				cada linha de uma tabela são chamadas de "table row" = <tr>
+				cada célula de uma tabela são chamadas de "table data" = <td>
 
-			<ul id="menu-principal">
-				<li>
-					<!--
-						O elemento <a> cria um link com uma página. O atributo href faz referência à pagina destino ao clicar na opção. Neste caso estamos criando um link para uma página que nós estamos construindo, mas poderia ser uma página já existente, por exempo:
+				Quando queremos que uma célula ocupe mais de uma linha devemos passar um atributo para a célula utilizando a "espanção em linha" = rowspan. Nesse casso devemos passar a quantidade de linhas, por exemplo: 
+
+					<td rowspan="2">Camera</td>
+					<td>5MP para fotos </td>
+					<td>720p para vídeos</td>
 					
-						<a href="http://www.estacio.br">Estácio</a>
-					-->
+				Da mesma forma, quando queremos que uma célula ocupe mais de uma coluna devemos passar um atributo para a célula utilizando a "espanção em coluna" = colspan. Nesse casso devemos passar a quantidade de colunas, por exemplo:
 
-					<a href="index.html">Home</a>
-				</li>
-				<li>
-					<a href="specs.html">Especificações</a>
-				</li>
-				<li>
-					<a href="fotos.html">Fotos</a>
-				</li>
-				<li>
-					<a href="multimidia.html">Multimídia</a>
-				</li>
-				<li>
-					<a href="fale-conosco.html">Fale Conosco</a>
-				</li>
-			</ul>
-			
-		</header>
+					<td colspan="2">Camera</td>
+					<td>5MP para fotos </td>
+					<td>720p para vídeos</td>
+			-->
+			<table id="tabela">
+	    		<caption>Tabela Técnica do Google Glass Mar/2013</caption>
+				<tr>
+					<td>Tela</td>
+					<td>Resolução equivalente a tela de 25"</td>
+				</tr>
+				<tr>
+					<td>Camera</td>
+					<td>5MP para fotos / 720p para vídeos</td>
+				<tr>
+					<td>Conectividade </td>
+					<td>Wi-Fi/ Bluetooth</td>
+				<tr>
+					<td>Memória Interna</td>
+					<td>12GB</td>
+				</tr>
+			</table>
 
-		<hgroup>
-			<h2>Tecnologia > Inovações</h2>
-			<h1>Saiba tudo sobre o Google Glass </h1>
-			<h3>por Marcelo F. Terenciani </h3>
-			<h4>Atualizado em 07/Abril/2016 </h4>
-		</hgroup>
+			<h1>Como funciona</h1>
+			<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
 
-		<!--
-			No HTML não é possível representar alguns caracteres especiais automaticamente. Para isto é necessário utilizar uma codificação especial para inseri-los, como no exemplo abaixo.
-			Para mais caracteres especiais acesse: http://erikasarti.net/html/acentuacao-caracteres-especiais/
-		--> 
-		<h1>Símbolos especiais</h1>
-		&amp; - E comercial &#36;
+			<h1>O que você pode fazer com o Google Glasses</h1>
+			<p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
+			[AQUI ENTRA UM VÍDEO]
 
-		<h1>O que é</h1>
+			<h1>Outras Notícias</h1>
+			<h2>Vídeo mais recente</h2>
 
-		<!--
-			A tag p identifica os meus paragrafos
-			a tap br indentica uma quebra de linha
-			a tag pre aceita a configuração de quebras e espaços
-		-->
+			[AQUI ENTRA UM VÍDEO]
 
-		<p>O Google &nbsp &nbsp &nbsp &nbsp Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada.Também chamado de Project Glass, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmete gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+			<h1>Novidades no Glass</h2>
+			<p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante. </p>
 
-		<img src="_imagens/glass-quadro-homem-mulher.jpg">
+			<p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador. </p>
 
-		<h1>Data de lançamento</h1>
-		<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014. </p>
-
-		<h1>Especificações Técnicas</h1>
-
-		<!--
-			As tabelas são inseridas em HTML por meio da tag <table>
-			cada linha de uma tabela são chamadas de "table row" = <tr>
-			cada célula de uma tabela são chamadas de "table data" = <td>
-
-			Quando queremos que uma célula ocupe mais de uma linha devemos passar um atributo para a célula utilizando a "espanção em linha" = rowspan. Nesse casso devemos passar a quantidade de linhas, por exemplo: 
-
-				<td rowspan="2">Camera</td>
-				<td>5MP para fotos </td>
-				<td>720p para vídeos</td>
-				
-			Da mesma forma, quando queremos que uma célula ocupe mais de uma coluna devemos passar um atributo para a célula utilizando a "espanção em coluna" = colspan. Nesse casso devemos passar a quantidade de colunas, por exemplo:
-
-				<td colspan="2">Camera</td>
-				<td>5MP para fotos </td>
-				<td>720p para vídeos</td>
-		-->
-		<table id="tabela">
-    		<caption>Tabela Técnica do Google Glass Mar/2013</caption>
-			<tr>
-				<td>Tela</td>
-				<td>Resolução equivalente a tela de 25"</td>
-			</tr>
-			<tr>
-				<td>Camera</td>
-				<td>5MP para fotos / 720p para vídeos</td>
-			<tr>
-				<td>Conectividade </td>
-				<td>Wi-Fi/ Bluetooth</td>
-			<tr>
-				<td>Memória Interna</td>
-				<td>12GB</td>
-			</tr>
-		</table>
-
-		<h1>Como funciona</h1>
-		<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
-
-		<h1>O que você pode fazer com o Google Glasses</h1>
-		<p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
-
-		[AQUI ENTRA UM VÍDEO]
-
-		<h1>Outras Notícias</h1>
-		<h2>Vídeo mais recente</h2>
-
-		[AQUI ENTRA UM VÍDEO]
-
-		<h1>Novidades no Glass</h2>
-		<p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante. </p>
-
-		<p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador. </p>
-
-		&copy Copyright 2016 - by Marcelo F. Terenciani <br />
-		Facebook | Twitter
+			&copy Copyright 2016 - by Marcelo F. Terenciani <br />
+			Facebook | Twitter
+		</div>
 	</body>
 </html>
