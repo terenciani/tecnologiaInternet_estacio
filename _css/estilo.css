@@ -2,3 +2,64 @@ body{
 	background-color: #dddddd;
 	color: rgba(0,0,0,1);
 }
+
+#conteudo{
+	width: 800px;
+	margin: 0px auto 0px auto;
+}
+
+@font-face{
+	font-family: 'FonteLogo';
+	src: url("_fonts/bubblegum-sans-regular.otf");
+}
+
+h1{	
+	font-family: 'FonteLogo', sans-serif;
+}
+
+div#conteudo{
+	width: 1024px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto;
+	padding: 10px;
+	/*deslocamento lateral, deslocamento vertical, espalhamento da sombra e a cor*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+
+}
+
+
+/*Formatacao do menu*/
+nav#menu{
+	display: block;
+}
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 740px;
+}
+nav#menu li{
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	transition: background-color 2s;
+}
+nav#menu h1{
+	display: none;
+}
+nav#menu li:hover{
+	background-color: #606060;
+}
+nav#menu li:active{
+	background-color: #606060;
+}
+nav#menu a{
+	color: black;
+	text-decoration: none;
+}
+nav#menu a:hover{
+	color: white;
+	text-decoration: underline;
+}
